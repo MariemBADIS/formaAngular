@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public bgColor = 'red';
+  public bgColor = 'blue';
   public show = false;
+
+  public changeStatut() {
+    this.show = !this.show;
+  }
 
 }
