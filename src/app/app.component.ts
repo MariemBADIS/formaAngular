@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  public bgColor = 'red';
+  public show = false;
+
 }
