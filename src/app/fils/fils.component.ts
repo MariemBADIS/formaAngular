@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-fils',
@@ -7,12 +7,19 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FilsComponent implements OnInit {
 
-  @Input() filsProperty: any;
+  @Input() filsProperty;
+  @Output() sendRequestToData = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
     console.log('Consulter la variable color du parent ', this.filsProperty);
+  }
+
+  sendEventToParent() {
+    this.sendRequestToData.emit(
+      `Please can I have some money :) `
+    );
   }
 
 }
