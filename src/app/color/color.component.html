@@ -3,4 +3,8 @@
   color
 </div>
 
-<input #inputColor (change)="changeColor(inputColor)" type="text" class="form-control">
+<input [(ngModel)]="color"
+       type="text"
+       class="form-control">
+
+le contenu de la propriété color est {{color}}
