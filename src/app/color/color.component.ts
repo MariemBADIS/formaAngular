@@ -19,4 +19,7 @@ export class ColorComponent implements OnInit {
     input.value = '';
   }
 
+  processRequest(message: any) {
+    alert(message);
+  }
 }
