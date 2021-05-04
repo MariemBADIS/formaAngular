@@ -10,6 +10,9 @@ export class ClassComponent implements OnInit {
   firstClass = true;
   secondClass = false;
   thirdClass = true;
+  show = true;
+
+  myTeam = ['Malek', 'Rym', 'Lobna', 'Asma'];
 
   constructor() {
   }
