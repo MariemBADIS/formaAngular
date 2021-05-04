@@ -1,0 +1,16 @@
+<div [ngStyle]="{
+  'color': color,
+  'background': bgColor,
+  'fontSize': fontSize}">
+ mon premier directive
+</div>
+
+<input type="text"
+       class="form-control"
+       [(ngModel)]="color">
+
+<input type="text"
+       class="form-control"
+       #sizeInput
+       type="number"
+       (change)="changeSize(sizeInput.value)">
