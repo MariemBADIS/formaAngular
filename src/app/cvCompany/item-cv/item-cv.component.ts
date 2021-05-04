@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Personne} from '../../Model/Personne';
 
 @Component({
   selector: 'app-item-cv',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemCvComponent implements OnInit {
 
-  constructor() { }
+  @Input() personne: Personne;
+  @Output() selectedPersonne = new EventEmitter();
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  public selectPersonne() {
+    // TODO émettre un evenement et y injecter la personne (transférer)
+    this.selectedPersonne.emit(
+      this.personne
+    );
   }
 
 }
