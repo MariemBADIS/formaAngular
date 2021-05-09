@@ -13,4 +13,14 @@
   test directive
 </div>
 
-<input type="text" class="form-control" appRainbow>
+<input *ngIf="show" type="text" class="form-control" appRainbow>
+
+<button class="btn btn-primary" (click)="show = !show">
+  directive structurelle
+</button>
+
+<ol class="list-group">
+  <li class="list-group-item" *ngFor="let itemTeam of myTeam; let i = index">
+    {{i+1}} -- {{itemTeam}}
+  </li>
+</ol>
