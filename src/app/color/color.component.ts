@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {PremierService} from '../premier.service';
 
 @Component({
   selector: 'app-color',
   templateUrl: './color.component.html',
-  styleUrls: ['./color.component.css']
+  styleUrls: ['./color.component.css'],
+  providers: [PremierService]
 })
 export class ColorComponent implements OnInit {
 
   color = 'blue';
 
-  constructor() { }
+  constructor(private premierService: PremierService) {
+  }
 
   ngOnInit() {
   }
@@ -21,5 +24,9 @@ export class ColorComponent implements OnInit {
 
   processRequest(message: any) {
     alert(message);
+  }
+
+  loggerMesData() {
+    this.premierService.logger('test');
   }
 }
