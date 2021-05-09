@@ -17,6 +17,7 @@ import { ClassComponent } from './directive/class/class.component';
 import { HighLightDirective } from './directive/high-light.directive';
 import { RainbowDirective } from './directive/rainbow.directive';
 import { DefaultImagePipe } from './cvCompany/default-image.pipe';
+import {PremierService} from './premier.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { DefaultImagePipe } from './cvCompany/default-image.pipe';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PremierService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
