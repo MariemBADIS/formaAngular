@@ -19,7 +19,7 @@ export class ListCvComponent implements OnInit {
 
   public selectPersonne(selectedPersonne) {
     this.selectedPersonne.emit(
-      this.selectedPersonne
+      selectedPersonne
     );
   }
 
